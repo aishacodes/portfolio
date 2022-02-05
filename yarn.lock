@@ -64,6 +64,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.13.10":
+  version "7.17.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.0.tgz#b8d142fc0f7664fb3d9b5833fd40dcbab89276c0"
+  integrity sha512-etcO/ohMNaNA2UBdaXBBSX/3aEzFMRrVfaPv8Ptc0k+cWpWW0QFiGZ2XnVqQZI1Cf734LbPGmqBKWESfW4x/dQ==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/types@7.15.0":
   version "7.15.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
@@ -2805,6 +2812,13 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+simpler-state@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/simpler-state/-/simpler-state-1.0.3.tgz#5490aa8719cb8453bbd01b40d1932a79342ba532"
+  integrity sha512-02I51XTnBsVqjnqn3fGG8MIfMhaZXdpZ7ODPYwBHw6+YXrHGStpH774ZMz0k8aXrfnJVJYDEnBcaMmtVJvSuOQ==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
 
 slash@^3.0.0:
   version "3.0.0"

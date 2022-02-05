@@ -5,23 +5,21 @@ import NavBar from "../components/NavBar";
 import ProjectTemplate from "../components/ProjectTemplate";
 import { HeaderData } from "../data/HeaderData";
 import { ProjectData } from "../data/ProjectData";
-import AboutSection from "../organisms/AboutSection";
 import Typed from "typed.js";
 import { AboutData } from "../data/AboutData";
 import { tecnologies, tools } from "../data/TechnologyData";
 import { socials } from "../data/Contact";
 import Link from "next/link";
-
+import { usetheme } from "../entities/theme.entity";
 
 const Home: NextPage = () => {
-
   const el = useRef(null);
 
   const desc_el = useRef(null);
-
+  const { colorTheme } = usetheme();
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
+    const typed = new Typed(el.current!, {
       strings: [HeaderData.name],
       // startDelay: 300,
       // typeSpeed: 100,
@@ -35,8 +33,12 @@ const Home: NextPage = () => {
     return () => {
       typed.destroy();
     };
-
   }, []);
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.add(colorTheme);
+  }, [colorTheme]);
+
   return (
     <div>
       <NavBar />
@@ -45,14 +47,25 @@ const Home: NextPage = () => {
           <Image src="/vectors/avatar.svg" width={72} height={72} />
         </div>
         <h5>Hello, I’m</h5>
-        <h3 className="text-6xl bebas-font uppercase min-h-[4rem] min-w-[24rem] " ref={el} style={{ whiteSpace: 'pre' }}
+        <h3
+          className="text-6xl bebas-font uppercase min-h-[4rem] min-w-[24rem] "
+          ref={el}
+          style={{ whiteSpace: "pre" }}
         ></h3>
-        <h3 className="text-6xl text-[#B9B9B9] bebas-font uppercase" >{HeaderData.jobTitle}
+        <h3 className="text-6xl text-[#B9B9B9] bebas-font uppercase">
+          {HeaderData.jobTitle}
         </h3>
       </header>
-      <section className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 mb-52" id="work">
+      <section
+        className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 mb-52"
+        id="work"
+      >
         {ProjectData.projects.map((project, index) => (
-          <ProjectTemplate key={index} details={project.desc} title={project.name} />
+          <ProjectTemplate
+            key={index}
+            details={project.desc}
+            title={project.name}
+          />
         ))}
       </section>
       <section className="w-2/3 mx-auto" id="about">
@@ -66,28 +79,45 @@ const Home: NextPage = () => {
         <div>
           <h2 className="text-4xl bebas-font font-normal mb-7">Technologies</h2>
           <div className="grid grid-cols-2 gap-y-2">
-            {tecnologies.map((technology, technologyIndex) => <p key={technologyIndex}>{technology}</p>)}
+            {tecnologies.map((technology, technologyIndex) => (
+              <p key={technologyIndex}>{technology}</p>
+            ))}
           </div>
         </div>
         <div>
           <h2 className="text-4xl bebas-font font-normal mb-7">Tools</h2>
           <div className="grid grid-cols-2 gap-y-2">
-            {tools.map((tool, toolIndex) => <p key={toolIndex}>{tool}</p>)}
+            {tools.map((tool, toolIndex) => (
+              <p key={toolIndex}>{tool}</p>
+            ))}
           </div>
         </div>
       </section>
-      <section className="max-w-max flex flex-col items-center mx-auto pt-52 " id="contact">
-        <p className="text-[#4F4F4F] text-lg text-center">Got a question, proposal or project or want to work together on<br/> something? Feel free to reach out.</p>
-        <p className="text-4xl font-bold text-[#313131] mt-6">aishatabdulfatah81@gmail.com</p>
+      <section
+        className="max-w-max flex flex-col items-center mx-auto pt-52 transform transition-all"
+        id="contact"
+      >
+        <p className="text-[#4F4F4F] text-lg text-center">
+          Got a question, proposal or project or want to work together on
+          <br /> something? Feel free to reach out.
+        </p>
+        <p className="text-4xl font-bold text-[#313131] mt-6">
+          aishatabdulfatah81@gmail.com
+        </p>
       </section>
       <footer className="w-2/3 mx-auto py-16 flex justify-between items-center">
         <div className="flex items-center gap-x-6">
-          {socials.map((social, socialIndex) => <Link href={social.link}><a href=""> <Image src={`/vectors/${social.icon}`} width={24} height={24} /></a></Link> 
-          )}
-
-
+          {socials.map((social, socialIndex) => (
+            <Link href={social.link}>
+              <a href="">
+                {" "}
+                <Image src={`/vectors/${social.icon}`} width={24} height={24} />
+              </a>
+            </Link>
+          ))}
         </div>
-        <p>Copyright © 2021 | Abdulfatah Aishat </p>      </footer>
+        <p>Copyright © 2021 | Abdulfatah Aishat </p>{" "}
+      </footer>
     </div>
   );
 };
