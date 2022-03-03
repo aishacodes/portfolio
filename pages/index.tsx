@@ -60,7 +60,7 @@ const Home: NextPage = () => {
         </h3>
       </header>
       <section
-        className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 mb-52"
+        className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 "
         id="work"
       >
         {ProjectData.projects.map((project, index) => (
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           />
         ))}
       </section>
-      <section className="w-2/3 mx-auto" id="about">
+      <section className="w-2/3 mx-auto pt-52" id="about">
         <div className="bebas-font text-[4rem] flex items-center">
           <h1 className="text-[#B9B9B9] mr-2">ABout</h1>
           <h1> ME</h1>
@@ -116,12 +116,14 @@ const Home: NextPage = () => {
       <footer className="w-2/3 mx-auto py-16 flex lg:flex-row flex-col justify-between items-center">
         <div className="flex items-center gap-x-6">
           {socials.map((social, socialIndex) => (
-            <Link href={social.link} key={socialIndex}>
-              <a href="">
-                {" "}
-                <Image src={`/vectors/${social.icon}`} width={24} height={24} />
-              </a>
-            </Link>
+            <a
+              href={social.link}
+              key={socialIndex}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Image src={`/vectors/${social.icon}`} width={24} height={24} />
+            </a>
           ))}
         </div>
         <p>Copyright © 2021 | Abdulfatah Aishat </p>{" "}
