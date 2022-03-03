@@ -10,7 +10,9 @@ const NavBar = () => {
   return (
     <nav className="z-50 bg-white dark:bg-slate-900  w-full py-5  sticky top-0 bebas-font">
       <div className="w-9/12 mx-auto flex items-center justify-between">
-        <a href="#">{HeaderData.name}</a>
+        <a href="#" className="text-lg md:text-base">
+          {HeaderData.name}
+        </a>
         <div className="md:flex items-center space-x-8 text-[#4F4F4F] hidden">
           <Link href="#about">
             <a href="#about">About</a>
@@ -44,13 +46,13 @@ const NavBar = () => {
           >
             <CloseIcon />
           </div>
-          <p className="nav-item" onClick={() => setIsMenuOpen(false)}>
+          <p className="text-xl" onClick={() => setIsMenuOpen(false)}>
             <Link href="#about">About</Link>
           </p>
-          <p className="nav-item" onClick={() => setIsMenuOpen(false)}>
-            <Link href="#works">Work</Link>
+          <p className="text-xl" onClick={() => setIsMenuOpen(false)}>
+            <Link href="#work">Work</Link>
           </p>
-          <p className="nav-item" onClick={() => setIsMenuOpen(false)}>
+          <p className="text-xl" onClick={() => setIsMenuOpen(false)}>
             <Link href="#contact">Contact</Link>
           </p>
         </div>
