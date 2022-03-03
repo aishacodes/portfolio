@@ -6,5 +6,6 @@ export const tecnologies = [
   "nextjs",
   "Tailwindcss",
   "Typescript",
+  "Stylecomponent",
 ];
 export const tools = ["Github", "VScode", "Vercel", "Gitlab", "Firebase"];
