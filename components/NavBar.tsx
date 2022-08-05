@@ -3,17 +3,40 @@ import React, { useEffect, useState } from "react";
 import { HeaderData } from "../data/HeaderData";
 import CloseIcon from "./vectors/CloseIcon";
 import MenuIcon from "./vectors/MenuIcon";
+import { gsap } from "gsap";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const desktopTl = gsap.timeline();
+    desktopTl
+      .fromTo(
+        ".desktopLogo",
+        {
+          xPercent: -100,
+          opacity: 0,
+          stagger: 0.1,
+        },
+        { opacity: 1, xPercent: 100 }
+      )
+      .fromTo(
+        ".links > a",
+        {
+          xPercent: 30,
+          opacity: 0,
+          stagger: 0.1,
+        },
+        { opacity: 1, xPercent: -30 }
+      );
+  }, []);
 
   return (
-    <nav className="z-50 bg-white dark:bg-slate-900  w-full py-5  sticky top-0 bebas-font">
+    <nav className="z-50 bg-white dark:bg-slate-900  w-full py-5  bebas-font">
       <div className="w-9/12 mx-auto flex items-center justify-between">
-        <a href="#" className="text-lg md:text-base">
+        <a href="#" className="text-lg md:text-base desktopLogo">
           {HeaderData.name}
         </a>
-        <div className="md:flex items-center space-x-8 text-[#4F4F4F] hidden">
+        <div className="md:flex items-center space-x-8 text-[#4F4F4F] hidden links">
           <Link href="#about">
             <a href="#about">About</a>
           </Link>

@@ -11,6 +11,9 @@ import { tecnologies, tools } from "../data/TechnologyData";
 import { socials } from "../data/Contact";
 import Link from "next/link";
 import { usetheme } from "../entities/theme.entity";
+import gsap from "gsap";
+import Header from "../components/Header";
+import Project from "../components/Project";
 
 const Home: NextPage = () => {
   const el = useRef(null);
@@ -39,38 +42,23 @@ const Home: NextPage = () => {
     root.classList.add(colorTheme);
   }, [colorTheme]);
 
+  useEffect(() => {
+    const blogTl = gsap.timeline({ delay: 1.5 });
+    blogTl.fromTo(
+      ".about-cover",
+      {
+        opacity: 0,
+        yPercent: 50,
+        stagger: 0.1,
+      },
+      { opacity: 1, yPercent: 0 }
+    );
+  }, []);
   return (
     <div>
       <NavBar />
-      <header className="pt-24 flex flex-col items-center ">
-        <div className="bg-[#B4A9F6] rounded-full h-[5rem] w-[5rem] flex items-center justify-center mb-5">
-          <Image src="/vectors/avatar.svg" width={72} height={72} />
-        </div>
-        <h5>Hello, I’m</h5>
-        <h3 className="text-4xl lg:text-6xl bebas-font uppercase">
-          {HeaderData.name}
-        </h3>
-        {/* <h3
-          className="text-6xl bebas-font uppercase min-h-[4rem] min-w-[24rem] "
-          ref={el}
-          style={{ whiteSpace: "pre" }}
-        ></h3> */}
-        <h3 className="text-3xl lg:text-6xl text-[#B9B9B9] bebas-font uppercase">
-          {HeaderData.jobTitle}
-        </h3>
-      </header>
-      <section
-        className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 "
-        id="work"
-      >
-        {ProjectData.projects.map((project, index) => (
-          <ProjectTemplate
-            key={index}
-            details={project.desc}
-            title={project.name}
-          />
-        ))}
-      </section>
+      <Header />
+      <Project />
       <section className="w-2/3 mx-auto pt-52" id="about">
         <div className="bebas-font text-[4rem] flex items-center">
           <h1 className="text-[#B9B9B9] mr-2">ABout</h1>
