@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ProjectData } from "../data/ProjectData";
-import ProjectTemplate from "./ProjectTemplate";
+import ProjectTemplate from "../components/ProjectTemplate";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
@@ -51,12 +51,7 @@ const Project = () => {
     >
       {ProjectData.projects.map((project, index) => (
         <div className={` project-animation project-animation-${index + 1}`}>
-          <ProjectTemplate
-            img={project.Image[0]}
-            key={index}
-            details={project.desc}
-            title={project.name}
-          />
+          <ProjectTemplate project={project} key={index} />
         </div>
       ))}
     </section>

@@ -8,11 +8,7 @@ export const ProjectData = {
     },
     {
       name: "EZvoucher",
-      Image: [
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-      ],
+      Image: ["/img/ezvoucher.png"],
       desc: "Ezee Voucher is a virtual multicurrency-enabled voucher platfrom for payments and collections across borders.",
       link: "",
     },

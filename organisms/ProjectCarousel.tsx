@@ -78,7 +78,12 @@ export default function ProjectCarousel() {
                 <div className="slide-img">
                   <img src={`${item.Image}`} alt="" />
                 </div>
-                <a href={item.link} target="_blank" className="project-info">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="project-info"
+                  rel="noreferrer"
+                >
                   <div className="desc">
                     <h2>{item.name}</h2>
                     <p>{item.desc}</p>
