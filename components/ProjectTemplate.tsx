@@ -4,9 +4,11 @@ import React from "react";
 const ProjectTemplate = ({
   title,
   details,
+  img,
 }: {
   title: string;
   details: string;
+  img: string;
 }) => {
   return (
     <div className="h-[39rem] w-full flex items-start project">
@@ -18,7 +20,9 @@ const ProjectTemplate = ({
           <Image alt="icon" src="/vectors/arrow.svg" width={16} height={16} />
         </div>
       </div>
-      <div className="bg-[#C1E5C0]  px-10 h-full w-3/4 mx-auto "></div>
+      <div className="bg-[#C1E5C0]   h-full w-3/4 mx-auto ">
+        <img src={img} alt="" className="h-full w-full object-cover" />
+      </div>
     </div>
   );
 };
