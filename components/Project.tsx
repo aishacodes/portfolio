@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ProjectData } from "../data/ProjectData";
-import ProjectTemplate from "../components/ProjectTemplate";
+import ProjectTemplate from "./ProjectTemplate";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
@@ -45,10 +45,7 @@ const Project = () => {
     );
   }, []);
   return (
-    <section
-      className="w-9/12 mx-auto flex flex-col space-y-28 pt-24 "
-      id="work"
-    >
+    <section className="w-9/12 mx-auto flex flex-col gap-28 pt-24 " id="work">
       {ProjectData.projects.map((project, index) => (
         <div className={` project-animation project-animation-${index + 1}`}>
           <ProjectTemplate project={project} key={index} />

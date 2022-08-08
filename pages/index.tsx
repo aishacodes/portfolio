@@ -13,7 +13,7 @@ import Link from "next/link";
 import { usetheme } from "../entities/theme.entity";
 import gsap from "gsap";
 import Header from "../components/Header";
-import Project from "../organisms/Project";
+import Project from "../components/Project";
 import ProjectSlider from "../organisms/ProjectCarousel";
 import ProjectCarousel from "../organisms/ProjectCarousel";
 
