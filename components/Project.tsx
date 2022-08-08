@@ -45,7 +45,10 @@ const Project = () => {
     );
   }, []);
   return (
-    <section className="w-9/12 mx-auto flex flex-col gap-28 pt-24 " id="work">
+    <section
+      className="w-11/12 lg:w-9/12 mx-auto flex flex-col gap-28 pt-24 "
+      id="work"
+    >
       {ProjectData.projects.map((project, index) => (
         <div className={` project-animation project-animation-${index + 1}`}>
           <ProjectTemplate project={project} key={index} />

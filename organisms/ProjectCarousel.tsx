@@ -42,24 +42,21 @@ export default function ProjectCarousel() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
-          infinite: true,
-          dots: false,
+        },
+      },
+      {
+        breakpoint: 1008,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
