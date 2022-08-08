@@ -10,6 +10,10 @@
 
     .slide-img {
       height: 28rem;
+      @media only screen and (max-width: 760px) {
+        height: 18rem;
+      }
+
       img {
         height: 100%;
         width: 100%;
@@ -49,9 +53,16 @@
   top: -4rem;
   right: 6rem;
   cursor: pointer;
+  @media only screen and (max-width: 760px) {
+    right: 7rem;
+  }
 }
 .text {
   margin-bottom: 3rem;
   font-weight: 600;
   font-size: 2rem;
+  @media only screen and (max-width: 760px) {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
 }

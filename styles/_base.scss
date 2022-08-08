@@ -3,6 +3,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 @tailwind base;
 @tailwind components;
+
 html,
 body {
   padding: 0;
@@ -10,9 +11,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow: hidden;
+  scroll-behavior: smooth !important;
 }
-html {
-  scroll-behavior: smooth;
+html,
+body,
+* {
+  scroll-behavior: smooth !important;
 }
 :root {
   font-size: 16px;

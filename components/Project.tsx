@@ -46,12 +46,14 @@ const Project = () => {
   }, []);
   return (
     <section
-      className="w-11/12 lg:w-9/12 mx-auto flex flex-col  pt-24 "
+      className="w-11/12 lg:w-9/12 mx-auto flex flex-col pt-12 md:pt-24 "
       id="work"
     >
       {ProjectData.projects.map((project, index) => (
         <div
-          className={` mb-20 project-animation project-animation-${index + 1}`}
+          className={` mb-10 md:mb-20 project-animation project-animation-${
+            index + 1
+          }`}
           key={index}
         >
           <ProjectTemplate project={project} key={index} />

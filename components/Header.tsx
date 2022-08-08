@@ -17,7 +17,7 @@ const Header = () => {
     );
   }, []);
   return (
-    <header className="mt-24 flex flex-col items-center header h-80 ">
+    <header className="mt-12 md:mt-24 flex flex-col items-center header md:h-80 ">
       <div className="bg-[#B4A9F6] rounded-full h-[5rem] w-[5rem] flex items-center justify-center mb-5">
         <Image src="/vectors/avatar.svg" width={72} height={72} />
       </div>
