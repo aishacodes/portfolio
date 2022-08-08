@@ -50,7 +50,10 @@ const Project = () => {
       id="work"
     >
       {ProjectData.projects.map((project, index) => (
-        <div className={` project-animation project-animation-${index + 1}`}>
+        <div
+          className={` project-animation project-animation-${index + 1}`}
+          key={index}
+        >
           <ProjectTemplate project={project} key={index} />
         </div>
       ))}
