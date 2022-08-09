@@ -4,7 +4,9 @@
   .project-slide {
     display: flex;
     height: 43rem;
-
+    @media only screen and (max-width: 760px) {
+      height: 36rem;
+    }
     .card {
       width: 90%;
       height: 100%;
