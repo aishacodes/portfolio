@@ -9,7 +9,7 @@ export const ProjectData = {
     {
       name: "Koprative",
       Image: ["/vectors/koprative.svg"],
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.",
+      desc: "Koprative is a cooperative society management application that helps financial institutions manage their members’ information and financial transactions and records. This includes Loan management (automated and manual approval), savings plans, metric tracking and usage analysis, disbursement, accounting and ledgers",
       link: "https://www.google.com",
     },
     {
@@ -25,7 +25,7 @@ export const otherProjects = [
   {
     name: "Hayak Landing Page",
     Image: ["/img/hayak-landing.png"],
-    desc: "All-in-one legal management tool for your law practice",
+    desc: "Hayak is an app used to explore the world and take on unique adventures and trips. You can browse between the sections easily or search for specific activities in your area of interests.",
     link: "https://hayak.sa/en",
     tags: ["NextJs", "Tailwindcss", "Typescript"],
   },
@@ -41,9 +41,16 @@ export const otherProjects = [
     tags: ["NextJs", "Typescript"],
   },
   {
+    name: "Karasey web app",
+    Image: ["/img/hayak-landing.png"],
+    desc: "All-in-one legal management tool for your law practice",
+    link: "https://hayak.sa/en",
+    tags: ["NextJs", "Tailwindcss", "Typescript"],
+  },
+  {
     name: "Jade Media Pro",
     Image: ["/img/jade.png"],
-    desc: "All-in-one legal management tool for your law practice",
+    desc: "",
     link: "https://jade-media-pro.vercel.app/",
     tags: ["NextJs", "Typescript"],
   },
