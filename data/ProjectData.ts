@@ -9,7 +9,7 @@ export const ProjectData = {
     {
       name: "Koprative",
       Image: ["/vectors/koprative.svg"],
-      desc: "Koprative is a cooperative society management application that helps financial institutions manage their members’ information and financial transactions and records. This includes Loan management (automated and manual approval), savings plans, metric tracking and usage analysis, disbursement, accounting and ledgers",
+      desc: "Koprative is a cooperative society management application that helps financial institutions manage their members’ information and financial transactions and records. ",
       link: "https://www.google.com",
     },
     {
@@ -38,7 +38,7 @@ export const otherProjects = [
     ],
     desc: "All-in-one legal management tool for your law practice",
     link: "https://www.google.com",
-    tags: ["NextJs", "Typescript"],
+    tags: ["React", "Typescript", "MUI"],
   },
   {
     name: "Karasey web app",

@@ -64,10 +64,10 @@ const Home: NextPage = () => {
       <main className="flex-grow overflow-auto">
         <Header />
         <Project />
-        <section className="h-[25rem] md:h-[40rem] ml-10 lg:ml-60">
+        <section className="h-[25rem] md:h-[50rem] ml-10 lg:ml-60">
           <ProjectCarousel />
         </section>
-        <section className="w-2/3 mx-auto pt-52" id="about">
+        <section className="w-2/3 mx-auto pt-44" id="about">
           <div className="bebas-font text-[4rem] flex items-center">
             <h1 className="text-[#B9B9B9] mr-2">About</h1>
             <h1> ME</h1>

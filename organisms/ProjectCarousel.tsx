@@ -65,9 +65,17 @@ export default function ProjectCarousel() {
     ],
   };
   return (
-    <div style={{ marginTop: "4rem", position: "relative" }}>
+    <div
+      style={{
+        marginTop: "4rem",
+        position: "relative",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <h2 className="text">Other Noteworthy Projects</h2>
-      <div>
+      <div className="slider-wrap">
         <Slider {...settings}>
           {otherProjects.map((item, itemIndex) => (
             <div className="project-slide">
