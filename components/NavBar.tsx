@@ -31,7 +31,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="z-50 bg-white dark:bg-slate-900  w-full py-5  bebas-font">
+    <nav className="z-50 bg-white dark:bg-slate-900  w-full py-5  bebas-font drop-shadow">
       <div className="w-9/12 mx-auto flex items-center justify-between">
         <Link href="/">
           <a className="text-lg md:text-base desktopLogo">{HeaderData.name}</a>
