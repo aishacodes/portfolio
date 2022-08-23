@@ -31,21 +31,10 @@ export const otherProjects = [
   },
   {
     name: "Hayak Dashboard",
-    Image: [
-      "https://images.unsplash.com/hoto-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    ],
-    desc: "All-in-one legal management tool for your law practice",
+    Image: ["/img/hayak-landing.png"],
+    desc: "Hayak Admin Panel",
     link: "https://www.google.com",
     tags: ["React", "Typescript", "MUI"],
-  },
-  {
-    name: "Karasey web app",
-    Image: ["/img/hayak-landing.png"],
-    desc: "All-in-one legal management tool for your law practice",
-    link: "https://hayak.sa/en",
-    tags: ["NextJs", "Tailwindcss", "Typescript"],
   },
   {
     name: "Jade Media Pro",
@@ -53,5 +42,12 @@ export const otherProjects = [
     desc: "",
     link: "https://jade-media-pro.vercel.app/",
     tags: ["NextJs", "Typescript"],
+  },
+  {
+    name: "Karasey web app",
+    Image: ["/img/karasey.png"],
+    desc: "All-in-one legal management tool for your law practice",
+    link: "https://karasey.com/en",
+    tags: ["NextJs", "Tailwindcss", "Typescript"],
   },
 ];
