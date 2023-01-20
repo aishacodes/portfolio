@@ -25,22 +25,6 @@ const Home: NextPage = () => {
   const desc_el = useRef(null);
   const { colorTheme } = usetheme();
 
-  // useEffect(() => {
-  //   const typed = new Typed(el.current!, {
-  //     strings: [HeaderData.name],
-  //     // startDelay: 300,
-  //     // typeSpeed: 100,
-  //     // backSpeed: 100,
-  //     // backDelay: 100,
-  //     typeSpeed: 50,
-  //     backSpeed: 50,
-  //     showCursor: false,
-  //   });
-
-  //   return () => {
-  //     typed.destroy();
-  //   };
-  // }, []);
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.add(colorTheme);

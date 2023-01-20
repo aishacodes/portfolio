@@ -1,22 +1,26 @@
 export const ProjectData = {
   projects: [
     {
+      name: "Ridima",
+      Image: ["/img/ridima1.png", "/img/ridima2.png"],
+      desc: "Ridima is a gift card trading platform that offers the best gift card rates and allows you to sell gift cards and get paid in Naira comfortably on your mobile device. They also give you access to great deals on gift card purchases and utility bills payment.",
+      link: "https://www.myridima.com/",
+      tech: ["Nextjs", "Tailwindcss", "typescript", "Gsap"],
+    },
+    {
       name: "Lawparlance",
-      Image: ["/img/lawparlance.png"],
+      Image: ["/img/lawparlance1.png", "/img/lawparlance2.png"],
       desc: "All-in-one legal management tool for your law practice",
       link: "https://www.lawparlance.com/",
+      tech: ["Reactjs", "Tailwindcss", "typescript", "rest", "simpler-state"],
     },
-    {
-      name: "Koprative",
-      Image: ["/vectors/koprative.svg"],
-      desc: "Koprative is a cooperative society management application that helps financial institutions manage their members’ information and financial transactions and records. ",
-      link: "https://www.google.com",
-    },
+
     {
       name: "EZvoucher",
-      Image: ["/img/ezvoucher.png"],
+      Image: ["/img/ezvoucher1.png", "/img/ezvoucher2.png"],
       desc: "Ezee Voucher is a virtual multicurrency-enabled voucher platfrom for payments and collections across borders.",
       link: "",
+      tech: ["Reactjs", "Tailwindcss", "typescript", "rest", "simpler-state"],
     },
   ],
 };

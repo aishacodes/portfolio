@@ -3,6 +3,7 @@ import { ProjectData } from "../data/ProjectData";
 import ProjectTemplate from "./ProjectTemplate";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import Koprative from "./Koprative";
 
 const Project = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -59,6 +60,7 @@ const Project = () => {
           <ProjectTemplate project={project} key={index} />
         </div>
       ))}
+      <Koprative />
     </section>
   );
 };
