@@ -22,7 +22,7 @@ const ProjectTemplate = ({ project }: { project: any }) => {
           </div>
         </a>
       </div>
-      <div className="bg-[#C1E5C0]  h-full md:w-10/12 lg:w-11/12 mx-auto ">
+      <div className="bg-[#C1E5C0] border border-[#C1E5C0]  h-full md:w-10/12 lg:w-11/12 mx-auto ">
         <img
           src={project.Image[0]}
           alt=""
